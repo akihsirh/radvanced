@@ -1,7 +1,10 @@
 getwd()
 setwd("C:/Git/R Programming Exercises/radvanced/dataset-cleaning")
 
-fin <- read.csv("Future500.csv")
+# Basic import --> fin <- read.csv("Future500.csv")
+# Import that deals with missing data 
+fin <- read.csv("Future500.csv", na.strings = c(""))
+
 head(fin)
 str(fin)
 
@@ -41,3 +44,4 @@ fin$Expenses <- as.numeric(fin$Expenses)
 fin$Revenue <- as.numeric(fin$Revenue)
 head(fin)
 str(fin)
+
